@@ -1,6 +1,7 @@
 # IEEEVitBhopal_BLH03_apple_cider
 ---
-## Project Title(Space Tech)
+## Project Title
+Interactive Educative Website on Space Martyrs using Django and React
 ---
 ## Team name 
 apple_cider
@@ -12,14 +13,23 @@ apple_cider
 - Yash Rawalkar (23BCE10874)
 ---
 ## Project Description
+Interactive Educative Website on Space Martyrs using django and react
+This product is aimed for kids and teenagers of the new generation who are unknown to the sacrifices made to explore the space.
+From Laika the dog to Sunita Williams who is till stuck in space till date.
+All for the future when mankind enters the new horizons of inter-celestial civilizations.
 ---
 ## Technologies used
+- Backend - Django
+- Frontend - React
+- API Integrations - 
+- Databases used for data - 
 ---
 ## Setup Instruction
 ---
 ## Usage Instruction
 ---
 ## Theme Fit
+- Space Technology 
 ---
 ## Future Enhancements
 ---
