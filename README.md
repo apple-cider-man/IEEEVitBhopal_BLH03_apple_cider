@@ -21,9 +21,8 @@ apple_cider
 ---
 ## Technologies used
 - Backend - Django
-- Frontend - React
-- API Integrations - 
-- Databases used for data - 
+- Frontend - React, TypeScript, CSS, HTML
+- Data - NASA apis 
 ---
 ## Setup Instruction
 ---

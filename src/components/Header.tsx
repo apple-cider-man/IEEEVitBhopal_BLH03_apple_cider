@@ -18,7 +18,9 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
           <div className={styles.spaceships}>SPACESHIPS</div>
         </nav>
         <button className={styles.headerplaynowbtn}>
-          <div className={styles.playnowbtntxt}>EXPLORE</div>
+          <a href="https://mapoftheuniverse.net">
+            <div className={styles.playnowbtntxt}>EXPLORE</div>
+          </a>
         </button>
       </div>
     </header>
