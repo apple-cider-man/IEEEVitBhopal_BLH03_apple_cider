@@ -1,24 +1,30 @@
-import PropTypes from "prop-types";
+import { FunctionComponent } from "react";
 import styles from "./SectionStory.module.css";
 
-const SectionStory = ({ className = "" }) => {
+export type SectionStoryType = {
+  className?: string;
+};
+
+const SectionStory: FunctionComponent<SectionStoryType> = ({
+  className = "",
+}) => {
   return (
     <div className={[styles.sectionStory, className].join(" ")}>
-      <section className={styles.main}>
+      <div className={styles.storyContent}>
         <div className={styles.container}>
           <div className={styles.texts}>
             <div className={styles.storysectionheading}>
               <h1 className={styles.story}>STORY</h1>
-              <div className={styles.theWorldOfContainer}>
-                <span className={styles.theWorldOf}>{`The World of `}</span>
-                <span>Verse Tarot Voyage</span>
-              </div>
+              <h3 className={styles.theCosmosOf}>
+                The Cosmos of Space sacrifices
+              </h3>
             </div>
             <div className={styles.storysectiondescription}>
-              A world where the multiverse is recognized. Verse Travelers and
-              Verse Hunters who travel through time and space embark on an
-              eventful journey to discover the truth of this world. Use the
-              prompt, the key to world change, to define your own happy world!
+              Born beneath a digital cosmos, they cradle stardust dreams. No
+              longer distant, stars are their playgrounds. Mars is a backyard,
+              the moon a stepping stone. Their lullabies are rocket launches,
+              their heroes, space-faring pioneers. A generation unbound by
+              gravity, their future orbits beyond the blue marble.
             </div>
           </div>
           <div className={styles.absoluteillusts}>
@@ -32,14 +38,10 @@ const SectionStory = ({ className = "" }) => {
             />
           </div>
         </div>
-      </section>
-      <section className={styles.absolutebottomgradient} />
+      </div>
+      <div className={styles.absolutebottomgradient} />
     </div>
   );
-};
-
-SectionStory.propTypes = {
-  className: PropTypes.string,
 };
 
 export default SectionStory;

@@ -1,25 +1,33 @@
-import PropTypes from "prop-types";
+import { FunctionComponent } from "react";
 import styles from "./SectionGuardian.module.css";
 
-const SectionGuardian = ({ className = "" }) => {
+export type SectionGuardianType = {
+  className?: string;
+};
+
+const SectionGuardian: FunctionComponent<SectionGuardianType> = ({
+  className = "",
+}) => {
   return (
     <div className={[styles.sectionGuardian, className].join(" ")}>
       <div className={styles.container}>
-        <div className={styles.leftcol}>
-          <img
-            className={styles.dreamshaperV7AGoddessBeautIcon}
-            loading="lazy"
-            alt=""
-            src="/dreamshaper-v7-a-goddess-beautiful-girl-with-smile-who-guides-0-1@2x.png"
-          />
-        </div>
+        <img
+          className={styles.image1Icon}
+          loading="lazy"
+          alt=""
+          src="/image-1@2x.png"
+        />
         <div className={styles.rightcol}>
-          <h2 className={styles.starGuardian}>Star Guardian</h2>
-          <div className={styles.theUniverseIs}>
-            The universe is vast, and sometimes it can make you feel isolated.
-            In such times, listen to the voice of the Star Guardian. He is a
-            being who will protect and inspire you. Surely, his teachings will
-            become a 'Philosophy of Courage' to survive in this harsh universe.
+          <h2 className={styles.laikaTheFirst}>
+            Laika: The First Dog in Space
+          </h2>
+          <div className={styles.laikaAStray}>
+            Laika, a stray Moscow dog, became the first animal to orbit Earth
+            aboard Sputnik 2 in 1957. Her mission was a crucial step for human
+            spaceflight, providing data on living organisms in space. Sadly, she
+            died within hours of launch due to overheating, despite initial
+            plans for euthanasia. Laika's sacrifice remains a poignant reminder
+            of the early days of space exploration.
           </div>
         </div>
       </div>
@@ -43,10 +51,6 @@ const SectionGuardian = ({ className = "" }) => {
       </div>
     </div>
   );
-};
-
-SectionGuardian.propTypes = {
-  className: PropTypes.string,
 };
 
 export default SectionGuardian;

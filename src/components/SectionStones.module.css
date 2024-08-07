@@ -1,43 +1,48 @@
 .grad,
-.sidecol,
 .stones1Icon {
-  margin: 0 !important;
   position: absolute;
   top: 0;
+  left: 0;
 }
 .stones1Icon {
   width: 100%;
   height: 100%;
-  left: 0;
   object-fit: cover;
 }
-.grad,
-.sidecol {
-  width: 320px;
-}
 .grad {
-  height: 100px;
-  left: 0;
   background: linear-gradient(180deg, #1e293b, rgba(30, 41, 59, 0));
+  width: 320px;
+  height: 100px;
   z-index: 1;
 }
+.stones1Parent {
+  height: 640px;
+  flex: 1;
+  position: relative;
+}
 .sidecol {
+  width: 320px;
+  margin: 0 !important;
+  position: absolute;
   height: 100%;
-  right: 0;
+  top: 0;
+  right: 18px;
   bottom: 0;
   background-color: var(--color-semantic-color-side-col);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  padding: 0 0 var(--padding-3xs);
+  box-sizing: border-box;
 }
-.aMysteriousStone,
-.stones {
+.manyPeopleHave,
+.people {
   margin: 0;
   position: relative;
   font-family: inherit;
 }
-.stones {
+.people {
   font-size: inherit;
   line-height: 100%;
   text-transform: uppercase;
@@ -52,7 +57,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.aMysteriousStone {
+.manyPeopleHave {
   font-size: var(--font-size-xl);
   line-height: 160%;
   font-weight: 300;
@@ -64,9 +69,6 @@
   justify-content: flex-start;
   gap: var(--gap-5xl);
   max-width: 100%;
-}
-.anotherImportantItem {
-  margin: 0;
 }
 .description {
   align-self: stretch;
@@ -95,119 +97,88 @@
   box-sizing: border-box;
   z-index: 2;
 }
-.stonecarouselitem1Icon {
+.stonecarouselitem2Icon {
   height: 212px;
   width: 212px;
   position: relative;
   border-radius: var(--br-xs);
   object-fit: cover;
   min-height: 212px;
-  flex-shrink: 0;
-}
-.stonecarousel {
-  width: 1364px;
-  margin: 0 !important;
-  position: absolute;
-  top: calc(50% - 106px);
-  right: -116px;
-  overflow: hidden;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-13xl);
-}
-.vectorIcon {
-  height: 16px;
-  width: 8px;
-  position: relative;
-}
-.vectorWrapper {
-  height: 64px;
-  width: 35px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-  border-radius: var(--radius-radius);
-  background-color: var(--color-system-color-purple-600);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.carouselcontrollers {
-  width: 1228px;
-  margin: 0 !important;
-  position: absolute;
-  top: 85px;
-  left: 13px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-  max-width: 100%;
-  z-index: 1;
 }
 .container,
-.sectionStones {
+.containerWrapper,
+.sectionStones,
+.stonecarousel {
   display: flex;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  position: relative;
-  max-width: 100%;
-}
-.container {
-  width: 1280px;
-  height: 236px;
   flex-direction: row;
   align-items: flex-start;
-  padding: var(--padding-66xl) var(--padding-smi) var(--padding-68xl);
-  gap: var(--gap-3xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.stonecarousel {
+  overflow: hidden;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-9xl) var(--padding-xs) 0;
+  gap: var(--gap-13xl);
+}
+.container,
+.containerWrapper,
+.sectionStones {
+  justify-content: flex-start;
+}
+.container {
+  padding: 0 var(--spacing-semantic-spaceing-container-side);
   z-index: 2;
+}
+.containerWrapper,
+.sectionStones {
+  padding: 0 0 0 var(--padding-5xs);
 }
 .sectionStones {
   align-self: stretch;
   background-color: var(--color-semantic-color-content-bg);
   flex-direction: column;
   align-items: center;
-  padding: var(--padding-base) var(--padding-xl) var(--padding-61xl);
-  gap: var(--gap-45xl);
-  min-height: 640px;
+  padding: var(--padding-base) var(--padding-xl) var(--padding-37xl)
+    var(--padding-9xl);
+  position: relative;
+  gap: var(--gap-15xl);
   flex-shrink: 0;
-  margin-top: -33px;
+  max-width: 102%;
+  z-index: 1;
+  margin-top: -39px;
   text-align: left;
   font-size: var(--font-size-25xl);
-  color: var(--color-gray-400);
+  color: var(--color-gray-100);
   font-family: var(--base-txt);
 }
+@media screen and (max-width: 1275px) {
+  .stonecarousel {
+    flex-wrap: wrap;
+  }
+}
 @media screen and (max-width: 750px) {
-  .stones {
+  .people {
     font-size: var(--font-size-16xl);
     line-height: 35px;
   }
+  .stonecarousel {
+    gap: var(--gap-base);
+  }
   .sectionStones {
-    gap: var(--gap-13xl);
-    padding-bottom: var(--padding-33xl);
+    gap: var(--gap-mid);
+    padding-top: var(--padding-1758xl-9);
+    padding-bottom: var(--padding-17xl);
     box-sizing: border-box;
   }
 }
 @media screen and (max-width: 450px) {
-  .stones {
+  .manyPeopleHave,
+  .people {
     font-size: var(--font-size-7xl);
     line-height: 26px;
   }
-  .aMysteriousStone {
+  .manyPeopleHave {
     font-size: var(--base-txt-size);
-    line-height: 26px;
-  }
-  .carouselcontrollers {
-    flex-wrap: wrap;
-  }
-  .container {
-    height: auto;
-    min-height: 236;
-  }
-  .sectionStones {
-    gap: var(--gap-base);
   }
 }

@@ -1,6 +1,9 @@
-.story {
+.story,
+.theCosmosOf {
   margin: 0;
   position: relative;
+}
+.story {
   font-size: inherit;
   line-height: 100%;
   text-transform: uppercase;
@@ -16,13 +19,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.theWorldOf {
-  font-weight: 300;
-}
-.theWorldOfContainer {
-  position: relative;
+.theCosmosOf {
   font-size: var(--font-size-xl);
   line-height: 160%;
+  font-weight: 300;
+  font-family: var(--font-open-sans);
 }
 .storysectionheading {
   display: flex;
@@ -41,7 +42,7 @@
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 .texts {
-  width: 608px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -78,7 +79,7 @@
   width: 696.5px;
   margin: 0 !important;
   position: absolute;
-  right: -40px;
+  right: -648px;
   bottom: -222.5px;
   overflow: hidden;
   flex-shrink: 0;
@@ -87,47 +88,41 @@
   align-items: flex-end;
   justify-content: center;
   gap: var(--gap-3xs);
-  max-width: 100%;
   z-index: 1;
 }
-.container {
-  width: 1280px;
+.container,
+.storyContent {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.container {
+  width: 672px;
   justify-content: flex-start;
   padding: 0 var(--spacing-semantic-spaceing-container-side);
-  box-sizing: border-box;
   position: relative;
   gap: var(--gap-24xl);
-  max-width: 100%;
 }
-.absolutebottomgradient,
-.main {
-  align-self: stretch;
+.storyContent {
+  width: 924px;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 0 0;
   flex-shrink: 0;
 }
-.main {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  max-width: 100%;
-  text-align: left;
-  font-size: var(--font-size-29xl);
-  color: var(--color-white);
-  font-family: var(--base-txt);
-}
 .absolutebottomgradient {
+  align-self: stretch;
   height: 150px;
   position: relative;
   background: linear-gradient(180deg, rgba(15, 23, 42, 0), #0f172a);
+  flex-shrink: 0;
 }
 .sectionStory {
-  width: 1512px;
+  align-self: stretch;
   height: 695px;
-  max-width: 100%;
   overflow: hidden;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -135,8 +130,19 @@
   padding: var(--padding-204xl-5) 0;
   box-sizing: border-box;
   gap: var(--gap-57xl-5);
-  line-height: normal;
-  letter-spacing: normal;
+  max-width: 100%;
+  z-index: 6;
+  text-align: left;
+  font-size: var(--font-size-29xl);
+  color: var(--color-white);
+  font-family: var(--base-txt);
+}
+@media screen and (max-width: 1100px) {
+  .sectionStory {
+    padding-top: var(--padding-1758xl-9);
+    padding-bottom: var(--padding-126xl);
+    box-sizing: border-box;
+  }
 }
 @media screen and (max-width: 750px) {
   .story {
@@ -155,11 +161,13 @@
     font-size: var(--font-size-10xl);
     line-height: 29px;
   }
-  .theWorldOfContainer {
+  .theCosmosOf {
     font-size: var(--base-txt-size);
     line-height: 26px;
   }
   .sectionStory {
     gap: var(--gap-lgi);
+    padding-bottom: var(--padding-75xl);
+    box-sizing: border-box;
   }
 }

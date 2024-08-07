@@ -1,7 +1,11 @@
-import PropTypes from "prop-types";
+import { FunctionComponent } from "react";
 import styles from "./Header.module.css";
 
-const Header = ({ className = "" }) => {
+export type HeaderType = {
+  className?: string;
+};
+
+const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
   return (
     <header className={[styles.header, className].join(" ")}>
       <div className={styles.headerleftcol} />
@@ -9,20 +13,16 @@ const Header = ({ className = "" }) => {
         <nav className={styles.headergnav}>
           <div className={styles.story}>STORY</div>
           <div className={styles.mission}>MISSION</div>
-          <div className={styles.coreTarot}>CORE TAROT</div>
-          <div className={styles.stones}>STONES</div>
-          <div className={styles.download}>DOWNLOAD</div>
+          <div className={styles.space}>SPACE</div>
+          <div className={styles.people}>PEOPLE</div>
+          <div className={styles.spaceships}>SPACESHIPS</div>
         </nav>
-        <div className={styles.headerplaynowbtn}>
-          <div className={styles.playnowbtntxt}>PLAY NOW</div>
-        </div>
+        <button className={styles.headerplaynowbtn}>
+          <div className={styles.playnowbtntxt}>EXPLORE</div>
+        </button>
       </div>
     </header>
   );
-};
-
-Header.propTypes = {
-  className: PropTypes.string,
 };
 
 export default Header;

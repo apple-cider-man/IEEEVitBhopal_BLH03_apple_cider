@@ -1,25 +1,21 @@
-.dreamshaperV7AGoddessBeautIcon {
-  height: 260px;
-  width: 260px;
+.image1Icon {
+  height: 266px;
+  width: 304px;
   position: relative;
-  border-radius: var(--br-980xl);
   object-fit: cover;
+  flex-shrink: 0;
 }
-.leftcol {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-.starGuardian {
+.laikaTheFirst {
   margin: 0;
   position: relative;
   font-size: inherit;
   line-height: 160%;
   font-weight: 600;
   font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
 }
-.theUniverseIs {
+.laikaAStray {
   align-self: stretch;
   position: relative;
   font-size: var(--base-txt-size);
@@ -35,21 +31,20 @@
   max-width: 100%;
 }
 .rightcol {
-  flex: 1;
+  width: 972px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-xl) 0;
+  padding: var(--padding-xl);
   gap: var(--gap-base);
-  min-width: 606px;
+  flex-shrink: 0;
 }
 .container {
-  width: 1280px;
+  width: 1290px;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0 var(--padding-9xl);
+  padding: var(--padding-12xs) var(--padding-2xs);
   gap: var(--gap-13xl);
 }
 .shootingstarsIcon {
@@ -69,41 +64,38 @@
   overflow: hidden;
   max-height: 100%;
 }
-.storywave1 {
+.storywave1,
+.storywave2 {
   width: 2229.5px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: flex-start;
+}
+.storywave1 {
+  align-items: flex-start;
   max-width: 148%;
   flex-shrink: 0;
 }
-.decowaves,
-.sectionGuardian,
 .storywave2 {
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-}
-.storywave2 {
-  width: 2229.5px;
   margin: 0 !important;
   position: absolute;
   top: 0;
   left: -358.7px;
-  overflow: hidden;
   align-items: center;
-  justify-content: flex-start;
   opacity: 0.6;
+  z-index: 1;
 }
 .decowaves,
 .sectionGuardian {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   max-width: 100%;
 }
 .decowaves {
   width: 1512px;
+  height: 150px;
   margin: 0 !important;
   position: absolute;
   top: 262px;
@@ -111,31 +103,36 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: 0;
+  z-index: 1;
 }
 .sectionGuardian {
-  align-self: stretch;
+  flex: 1;
   background-color: var(--color-semantic-color-base-bg);
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-11xs) 0 0;
+  padding: var(--padding-11xs) 0 var(--padding-5xs);
   position: relative;
-  min-height: 412px;
+  min-height: 420px;
+  flex-shrink: 0;
+  z-index: 5;
   text-align: left;
   font-size: var(--font-size-5xl);
   color: var(--color-white);
   font-family: var(--base-txt);
 }
-@media screen and (max-width: 750px) {
-  .rightcol {
-    min-width: 100%;
+@media screen and (max-width: 1275px) {
+  .container {
+    flex-wrap: wrap;
   }
+}
+@media screen and (max-width: 750px) {
   .container {
     gap: var(--gap-base);
   }
 }
 @media screen and (max-width: 450px) {
-  .starGuardian {
+  .laikaTheFirst {
     font-size: var(--font-size-lgi);
     line-height: 31px;
   }

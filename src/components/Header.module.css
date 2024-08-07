@@ -2,6 +2,10 @@
   height: 39px;
   width: 165px;
 }
+.mission,
+.people,
+.space,
+.spaceships,
 .story {
   position: relative;
   line-height: 17px;
@@ -9,51 +13,46 @@
   display: inline-block;
   min-width: 46px;
 }
-.mission {
+.mission,
+.people,
+.space,
+.spaceships {
   min-width: 59px;
 }
-.coreTarot,
-.download,
-.mission,
-.stones {
-  position: relative;
-  line-height: 17px;
-  font-weight: 200;
-  display: inline-block;
+.people,
+.space,
+.spaceships {
+  min-width: 44px;
 }
-.coreTarot {
-  flex: 1;
-  min-width: 86px;
-  white-space: nowrap;
+.people,
+.spaceships {
+  min-width: 53px;
 }
-.download,
-.stones {
-  min-width: 56px;
+.spaceships {
+  min-width: 84px;
 }
-.download {
-  flex: 1;
-  min-width: 82px;
+.headergnav,
+.playnowbtntxt {
+  font-size: var(--font-size-sm);
+  font-family: var(--base-txt);
+  color: var(--color-white);
+  text-align: left;
 }
 .headergnav {
   margin: 0;
-  flex: 1;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-base-4);
+  gap: var(--gap-base-6);
   max-width: 100%;
-  text-align: left;
-  font-size: var(--font-size-sm);
-  color: var(--color-white);
-  font-family: var(--base-txt);
 }
 .playnowbtntxt {
   position: relative;
   line-height: 17px;
   font-weight: 500;
   display: inline-block;
-  min-width: 75px;
+  min-width: 64px;
 }
 .header,
 .headerplaynowbtn,
@@ -63,39 +62,32 @@
   align-items: center;
 }
 .headerplaynowbtn {
-  border-radius: var(--br-5xs);
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-5xs) var(--padding-4xs);
   background-color: var(--color-hotpink);
+  border-radius: var(--br-5xs);
   justify-content: center;
-  padding: var(--padding-5xs) var(--padding-3xs);
-  white-space: nowrap;
+}
+.headerplaynowbtn:hover {
+  background-color: var(--color-mediumvioletred);
 }
 .header,
 .headerrightcol {
-  max-width: 100%;
-}
-.headerrightcol {
-  width: 502px;
   justify-content: flex-start;
   gap: var(--gap-mid);
+  max-width: 100%;
 }
 .header {
-  flex: 0.9577;
+  align-self: stretch;
   justify-content: space-between;
   padding: var(--padding-4xs-5) var(--padding-13xl);
   box-sizing: border-box;
   gap: var(--gap-xl);
-  z-index: 2;
-  margin-left: -1512px;
-  text-align: left;
-  font-size: var(--font-size-sm);
-  color: var(--color-white);
-  font-family: var(--base-txt);
+  z-index: 1;
 }
 @media screen and (max-width: 750px) {
   .headergnav {
     display: none;
-  }
-  .headerrightcol {
-    width: 112px;
   }
 }

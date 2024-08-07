@@ -1,59 +1,68 @@
-import FrameComponent from "../components/FrameComponent";
+import { FunctionComponent } from "react";
 import Header from "../components/Header";
+import SectionStory from "../components/SectionStory";
 import SectionGuardian from "../components/SectionGuardian";
 import SectionMission from "../components/SectionMission";
-import FrameComponent1 from "../components/FrameComponent1";
+import FrameComponent2 from "../components/FrameComponent2";
 import SectionStones from "../components/SectionStones";
 import styles from "./Page.module.css";
 
-const Page = () => {
+const Page: FunctionComponent = () => {
   return (
     <div className={styles.page}>
-      <img className={styles.bg3Icon} alt="" src="/bg3@2x.png" />
-      <img className={styles.bg2Icon} alt="" src="/bg3@2x.png" />
-      <img className={styles.bg1Icon} alt="" src="/bg3@2x.png" />
-      <section className={styles.frameParent}>
-        <FrameComponent />
+      <div className={styles.bg1Wrapper}>
+        <img className={styles.bg1Icon} alt="" src="/bg1@2x.png" />
+      </div>
+      <div className={styles.headerParent}>
         <Header />
-      </section>
-      <section className={styles.sectionGuardianParent}>
+        <SectionStory />
+      </div>
+      <div className={styles.sectionGuardianWrapper}>
         <SectionGuardian />
+      </div>
+      <div className={styles.bg2Wrapper}>
+        <img className={styles.bg1Icon} alt="" src="/bg1@2x.png" />
+      </div>
+      <footer className={styles.bottomgrad} />
+      <div className={styles.frameParent}>
         <div className={styles.sectionMissionParent}>
           <SectionMission />
-          <FrameComponent1 />
+          <FrameComponent2 />
           <SectionStones />
         </div>
-      </section>
-      <footer className={styles.bottomgrad} />
-      <section className={styles.pageInner}>
-        <div className={styles.picParent}>
-          <img
-            className={styles.picIcon}
-            loading="lazy"
-            alt=""
-            src="/pic@2x.png"
-          />
-          <div className={styles.moreInfoParent}>
-            <h1 className={styles.moreInfo}>More Info</h1>
-            <div className={styles.thisGameDoesntContainer}>
-              <span>{`This game doesn't exist. This is a page I created in the process of studying design and programming. This design is published as my Figma file or web page. If you would like to know more about the author of this page, please visit `}</span>
-              <a
-                className={styles.myWebsite}
-                href="https://masa-sumimoto.com/"
-                target="_blank"
-              >
-                <span className={styles.myWebsite1}>my website</span>
-              </a>
-              <span>.</span>
+        <div className={styles.frameWrapper}>
+          <div className={styles.picParent}>
+            <img
+              className={styles.picIcon}
+              loading="lazy"
+              alt=""
+              src="/pic@2x.png"
+            />
+            <div className={styles.futureEndeavoursParent}>
+              <h1 className={styles.futureEndeavours}>Future endeavours</h1>
+              <div className={styles.weWillTryContainer}>
+                <p className={styles.weWillTry}>
+                  We will try to integrate more games and interactive websites
+                  to engage more
+                </p>
+                <p className={styles.peopleInThe}>
+                  {" "}
+                  people in the website so that more people are able to know
+                  what is happening in the space what has already happened
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <section className={styles.footer}>
-        <div className={styles.masaakiSumimotoAll}>
-          © 2024 Masaaki Sumimoto. All rights reserved.
+      </div>
+      <main className={styles.bg3Wrapper}>
+        <img className={styles.bg1Icon} alt="" src="/bg1@2x.png" />
+      </main>
+      <div className={styles.footer}>
+        <div className={styles.appleCiderAll}>
+          © 2024 Apple Cider. All rights reserved.
         </div>
-      </section>
+      </div>
     </div>
   );
 };
