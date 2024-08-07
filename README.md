@@ -25,11 +25,19 @@ apple_cider
 - Data - NASA apis 
 ---
 ## Setup Instruction
+- make sure you have nodejs installed on the system
+- run "npm install" in the file directory
+- run "npm run start" then press "o + enter " to open it in your browser
 ---
 ## Usage Instruction
+- you can browse the website as you like
+- the explore button redirects you to an interactive map of the universe
+- the photos redirect you to the wiki of them
 ---
 ## Theme Fit
 - Space Technology 
 ---
 ## Future Enhancements
+- to add mini games to hook the kids in
+- mini comics to keep the interest in the site delivering useful info
 ---
