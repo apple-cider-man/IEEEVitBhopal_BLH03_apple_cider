@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import styles from "./SectionStones.module.css";
+import { Link } from "react-router-dom";
 
 export type SectionStonesType = {
   className?: string;
@@ -46,35 +47,45 @@ const SectionStones: FunctionComponent<SectionStonesType> = ({
       <div className={styles.containerWrapper}>
         <div className={styles.container}>
           <div className={styles.stonecarousel}>
-            <img
-              className={styles.stonecarouselitem2Icon}
-              loading="lazy"
-              alt=""
-              src="/stonecarouselitem2@2x.png"
-            />
-            <img
-              className={styles.stonecarouselitem2Icon}
-              loading="lazy"
-              alt=""
-              src="/stonecarouselitem3@2x.png"
-            />
-            <img
-              className={styles.stonecarouselitem2Icon}
-              loading="lazy"
-              alt=""
-              src="/stonecarouselitem4@2x.png"
-            />
-            <img
-              className={styles.stonecarouselitem2Icon}
-              loading="lazy"
-              alt=""
-              src="/stonecarouselitem5@2x.png"
-            />
-            <img
-              className={styles.stonecarouselitem2Icon}
-              alt=""
-              src="/stonecarouselitem6@2x.png"
-            />
+            <Link to="https://en.wikipedia.org/wiki/Neil_Armstrong">
+              <img
+                className={styles.stonecarouselitem2Icon}
+                loading="lazy"
+                alt=""
+                src="/stonecarouselitem2@2x.png"
+              />
+            </Link>
+            <Link to="https://en.wikipedia.org/wiki/Valentina_Tereshkova">
+              <img
+                className={styles.stonecarouselitem2Icon}
+                loading="lazy"
+                alt=""
+                src="/stonecarouselitem3@2x.png"
+              />
+            </Link>
+            <Link to="https://en.wikipedia.org/wiki/Ham_(chimpanzee)">
+              <img
+                className={styles.stonecarouselitem2Icon}
+                loading="lazy"
+                alt=""
+                src="/stonecarouselitem4@2x.png"
+              />
+            </Link>
+            <Link to="https://en.wikipedia.org/wiki/Gus_Grissom">
+              <img
+                className={styles.stonecarouselitem2Icon}
+                loading="lazy"
+                alt=""
+                src="/stonecarouselitem5@2x.png"
+              />
+            </Link>
+            <Link to="https://en.wikipedia.org/wiki/John_Glenn">
+              <img
+                className={styles.stonecarouselitem2Icon}
+                alt=""
+                src="/stonecarouselitem6@2x.png"
+              />
+            </Link>
           </div>
         </div>
       </div>
