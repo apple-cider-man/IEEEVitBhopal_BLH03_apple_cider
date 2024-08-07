@@ -1,0 +1,213 @@
+.grad,
+.sidecol,
+.stones1Icon {
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+}
+.stones1Icon {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+}
+.grad,
+.sidecol {
+  width: 320px;
+}
+.grad {
+  height: 100px;
+  left: 0;
+  background: linear-gradient(180deg, #1e293b, rgba(30, 41, 59, 0));
+  z-index: 1;
+}
+.sidecol {
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-semantic-color-side-col);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.aMysteriousStone,
+.stones {
+  margin: 0;
+  position: relative;
+  font-family: inherit;
+}
+.stones {
+  font-size: inherit;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 900;
+  background: linear-gradient(
+    104.33deg,
+    #00a1c7,
+    #f5559e 48.39%,
+    #fff,
+    #ed7d0c
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.aMysteriousStone {
+  font-size: var(--font-size-xl);
+  line-height: 160%;
+  font-weight: 300;
+}
+.headings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.anotherImportantItem {
+  margin: 0;
+}
+.description {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--base-txt-size);
+  line-height: 200%;
+  font-weight: 200;
+  color: var(--color-semantic-color-base-txt);
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+.containerWithsidecol,
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.texts {
+  width: 888px;
+  gap: var(--gap-base);
+}
+.containerWithsidecol {
+  width: 1280px;
+  padding: 0 var(--padding-13xl);
+  box-sizing: border-box;
+  z-index: 2;
+}
+.stonecarouselitem1Icon {
+  height: 212px;
+  width: 212px;
+  position: relative;
+  border-radius: var(--br-xs);
+  object-fit: cover;
+  min-height: 212px;
+  flex-shrink: 0;
+}
+.stonecarousel {
+  width: 1364px;
+  margin: 0 !important;
+  position: absolute;
+  top: calc(50% - 106px);
+  right: -116px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.vectorIcon {
+  height: 16px;
+  width: 8px;
+  position: relative;
+}
+.vectorWrapper {
+  height: 64px;
+  width: 35px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius-radius);
+  background-color: var(--color-system-color-purple-600);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.carouselcontrollers {
+  width: 1228px;
+  margin: 0 !important;
+  position: absolute;
+  top: 85px;
+  left: 13px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  max-width: 100%;
+  z-index: 1;
+}
+.container,
+.sectionStones {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+}
+.container {
+  width: 1280px;
+  height: 236px;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--padding-66xl) var(--padding-smi) var(--padding-68xl);
+  gap: var(--gap-3xs);
+  z-index: 2;
+}
+.sectionStones {
+  align-self: stretch;
+  background-color: var(--color-semantic-color-content-bg);
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-base) var(--padding-xl) var(--padding-61xl);
+  gap: var(--gap-45xl);
+  min-height: 640px;
+  flex-shrink: 0;
+  margin-top: -33px;
+  text-align: left;
+  font-size: var(--font-size-25xl);
+  color: var(--color-gray-400);
+  font-family: var(--base-txt);
+}
+@media screen and (max-width: 750px) {
+  .stones {
+    font-size: var(--font-size-16xl);
+    line-height: 35px;
+  }
+  .sectionStones {
+    gap: var(--gap-13xl);
+    padding-bottom: var(--padding-33xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .stones {
+    font-size: var(--font-size-7xl);
+    line-height: 26px;
+  }
+  .aMysteriousStone {
+    font-size: var(--base-txt-size);
+    line-height: 26px;
+  }
+  .carouselcontrollers {
+    flex-wrap: wrap;
+  }
+  .container {
+    height: auto;
+    min-height: 236;
+  }
+  .sectionStones {
+    gap: var(--gap-base);
+  }
+}

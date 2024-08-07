@@ -1,0 +1,202 @@
+.bg1Icon,
+.bg2Icon,
+.bg3Icon {
+  width: 100%;
+  height: 754px;
+  position: absolute;
+  margin: 0 !important;
+  right: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+  mix-blend-mode: normal;
+}
+.bg3Icon {
+  bottom: 1296px;
+}
+.bg1Icon,
+.bg2Icon {
+  top: 754px;
+}
+.bg1Icon {
+  top: 0;
+}
+.frameParent,
+.sectionGuardianParent,
+.sectionMissionParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.sectionGuardianParent,
+.sectionMissionParent {
+  flex-direction: column;
+}
+.sectionGuardianParent {
+  padding: 0 0 96px;
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+}
+.bottomgrad {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  margin: 0 !important;
+  right: 0;
+  bottom: 92px;
+  left: 0;
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0), #020617);
+}
+.picIcon {
+  width: 364px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+}
+.moreInfo {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: inherit;
+  background: linear-gradient(
+    104.33deg,
+    #00a1c7,
+    #f5559e 48.39%,
+    #fff,
+    #ed7d0c
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.myWebsite1 {
+  text-decoration: underline;
+}
+.myWebsite {
+  color: var(--color-system-color-fuchsia-500);
+}
+.thisGameDoesntContainer {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--base-txt-size);
+  line-height: 200%;
+  font-weight: 200;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
+}
+.moreInfoParent,
+.pageInner,
+.picParent {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.moreInfoParent {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+  min-width: 533px;
+}
+.pageInner,
+.picParent {
+  flex-direction: row;
+}
+.picParent {
+  width: 1216px;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.pageInner {
+  align-self: stretch;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 175.1px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--font-size-25xl);
+  color: var(--color-semantic-color-base-txt);
+  font-family: var(--base-txt);
+}
+.masaakiSumimotoAll {
+  position: relative;
+  line-height: 200%;
+  font-weight: 200;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+.footer,
+.page {
+  display: flex;
+  align-items: flex-start;
+}
+.footer {
+  align-self: stretch;
+  background-color: var(--color-system-color-slate-950);
+  flex-direction: row;
+  justify-content: center;
+  padding: var(--padding-13xl) var(--padding-xl);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-semantic-color-base-txt);
+  font-family: var(--base-txt);
+}
+.page {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-semantic-color-base-bg);
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 25px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1200px) {
+  .sectionGuardianParent {
+    padding-bottom: 40px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .picIcon {
+    flex: 1;
+  }
+  .picParent {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  .sectionGuardianParent {
+    padding-bottom: var(--padding-7xl);
+    box-sizing: border-box;
+  }
+  .moreInfo {
+    font-size: var(--font-size-16xl);
+    line-height: 35px;
+  }
+  .moreInfoParent {
+    min-width: 100%;
+  }
+  .picParent {
+    gap: var(--gap-base);
+  }
+}
+@media screen and (max-width: 450px) {
+  .moreInfo {
+    font-size: var(--font-size-7xl);
+    line-height: 26px;
+  }
+  .moreInfoParent {
+    gap: var(--gap-base);
+  }
+  .pageInner {
+    padding-bottom: 114px;
+    box-sizing: border-box;
+  }
+}

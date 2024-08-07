@@ -1,0 +1,101 @@
+.headerleftcol {
+  height: 39px;
+  width: 165px;
+}
+.story {
+  position: relative;
+  line-height: 17px;
+  font-weight: 200;
+  display: inline-block;
+  min-width: 46px;
+}
+.mission {
+  min-width: 59px;
+}
+.coreTarot,
+.download,
+.mission,
+.stones {
+  position: relative;
+  line-height: 17px;
+  font-weight: 200;
+  display: inline-block;
+}
+.coreTarot {
+  flex: 1;
+  min-width: 86px;
+  white-space: nowrap;
+}
+.download,
+.stones {
+  min-width: 56px;
+}
+.download {
+  flex: 1;
+  min-width: 82px;
+}
+.headergnav {
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base-4);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  font-family: var(--base-txt);
+}
+.playnowbtntxt {
+  position: relative;
+  line-height: 17px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 75px;
+}
+.header,
+.headerplaynowbtn,
+.headerrightcol {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.headerplaynowbtn {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-hotpink);
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-3xs);
+  white-space: nowrap;
+}
+.header,
+.headerrightcol {
+  max-width: 100%;
+}
+.headerrightcol {
+  width: 502px;
+  justify-content: flex-start;
+  gap: var(--gap-mid);
+}
+.header {
+  flex: 0.9577;
+  justify-content: space-between;
+  padding: var(--padding-4xs-5) var(--padding-13xl);
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+  z-index: 2;
+  margin-left: -1512px;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  font-family: var(--base-txt);
+}
+@media screen and (max-width: 750px) {
+  .headergnav {
+    display: none;
+  }
+  .headerrightcol {
+    width: 112px;
+  }
+}
