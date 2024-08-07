@@ -13,6 +13,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
         <nav className={styles.headergnav}>
           <div className={styles.story}>STORY</div>
           <div className={styles.mission}>MISSION</div>
+          <div className={styles.space}>SPACE</div>
           <div className={styles.people}>PEOPLE</div>
           <div className={styles.spaceships}>SPACESHIPS</div>
         </nav>
